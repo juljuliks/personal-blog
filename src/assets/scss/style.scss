@@ -8,6 +8,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe\ UI" ,Roboto, "Helvetica\ Neue", Arial, "Noto Sans", sans-serif;
     background-color: #181818;
     font-size: 1.4rem;
+    line-height: 1.5;
     color: $white;
 }
 
@@ -20,6 +21,22 @@ body {
 /* Blocks */
 @import "blocks/page";
 @import "blocks/header";
+@import "blocks/nav";
+@import "blocks/subnav";
 @import "blocks/sidebar";
 @import "blocks/main";
 @import "blocks/container";
+@import "blocks/profile";
+@import "blocks/social";
+@import "blocks/btn";
+@import "blocks/search";
+@import "blocks/stories";
+@import "blocks/add-post";
+@import "blocks/post";
+
+
+
+
+
+
+
