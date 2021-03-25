@@ -517,8 +517,7 @@ body {
 }
 
 .main {
-    padding-top: 10rem;
-    padding-left: 300px;
+    padding: 10rem 0 8rem 300px;
 }
 
 .container {
@@ -696,6 +695,8 @@ body {
     top: 0;
     left: 0;
     z-index: 1;
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
     transition: -webkit-transform 1s ease-in-out;
     transition: transform 1s ease-in-out;
     transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
@@ -725,6 +726,7 @@ body {
 .add-post {
     padding: 1.5rem 2rem;
     margin-bottom: 3rem;
+    background-color: #121212;
     border-radius: 5px;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.45);
 }
@@ -732,16 +734,20 @@ body {
 .add-post__form {
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 .add-post__textarea {
     display: block;
-    width: 70%;
+    width: 80%;
+    height: 26px;
     font-family: inherit;
     font-size: 1.5rem;
     color: #fff;
     border: none;
     background: transparent;
+    resize: none;
 }
 
 .add-post__textarea::-webkit-input-placeholder {
@@ -762,4 +768,198 @@ body {
 
 .add-post__textarea::placeholder {
     color: #D2D2D2;
+}
+
+.add-post__form-actions {
+    width: 20%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.add-post__file,
+.add-post__send {
+    display: block;
+    width: 4.4rem;
+    height: 4.4rem;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    transition: background-color .2s ease-in-out;
+}
+
+.add-post__file {
+    background: #EBEBEB url("../images/add-post/add-file.svg") center no-repeat;
+}
+
+.add-post__file input {
+    display: none;
+}
+
+.add-post__file:hover {
+    background-color: #c5c5c5;
+}
+
+.add-post__send {
+    margin-left: 1.5rem;
+    background-color: #2A5FE7;
+}
+
+.add-post__send:hover {
+    background-color: #1950de;
+}
+
+.post {
+    margin-bottom: 3rem;
+    padding: 2.5rem;
+    background-color: #202020;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.35);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.post__header {
+    margin: -2.5rem -2.5rem 2.5rem;
+}
+
+.post__header--video {
+    margin: 0 0 2.5rem;
+}
+
+.post__content {
+    margin-bottom: 2rem;
+}
+
+.post__preview {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.post__title {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+.post__title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.post__title a:hover {
+    text-decoration: underline;
+}
+
+.post__text {
+    font-size: 1.4rem;
+    color: #D2D2D2;
+}
+
+.post__footer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.post__data {
+    display: -ms-flexbox;
+    display: flex;
+    color: #828282;
+    line-height: 1.2rem;
+}
+
+.post__data a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.post__data a:hover {
+    text-decoration: underline;
+}
+
+.post__data-item:not(:last-child):after {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin: 0 1.5rem;
+    position: relative;
+    top: -2px;
+    border-radius: 50%;
+    background-color: #C4C4C4;
+}
+
+.post__read {
+    font-size: 1.4rem;
+    color: #107EFF;
+    text-decoration: none;
+}
+
+.post__read:hover {
+    text-decoration: underline;
+}
+
+.embed {
+    position: relative;
+    overflow: hidden;
+}
+
+.embed::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%;
+}
+
+.embed iframe,
+  .embed video,
+  .embed object,
+  .embed embed {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.pagination {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 8rem;
+}
+
+.pagination__item {
+    margin: 0 .5rem;
+}
+
+.pagination__link {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #0D0D0D;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    color: #fff;
+    font-size: 1.4rem;
+    text-decoration: none;
+    line-height: 4rem;
+    transition: background-color .2s ease-in-out;
+}
+
+.pagination__link:hover {
+    background-color: #121212;
+}
+
+.pagination__link.active {
+    background-color: #2A5FE7;
+    box-shadow: 0 0 10px rgba(42, 95, 231, 0.15);
 }
