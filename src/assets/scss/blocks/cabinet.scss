@@ -1,5 +1,9 @@
 .cabinet {
     display: flex;
+
+    @include breakpoint($mobile-bp) {
+        flex-direction: column-reverse;
+    }
 }
 
 .cabinet__form {
@@ -13,6 +17,11 @@
     img {
         display: block;
         margin-bottom: 1.5rem;
+    }
+
+    @include breakpoint($mobile-bp) {
+        padding-left: 0;
+        margin-bottom: 2rem ;
     }
 }
 
